@@ -14,6 +14,12 @@ extern {
 }
 
 #[wasm_bindgen]
+pub fn init() {
+    utils::set_panic_hook();
+}
+
+#[wasm_bindgen]
 pub fn greet() {
+    log!("Hello rust-chess");
     alert("Hello, rust-chess!");
 }
